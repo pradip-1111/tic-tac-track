@@ -91,7 +91,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-indigo-950 text-foreground min-h-screen;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -172,7 +172,7 @@
     margin: auto;
     width: 75%;
     height: 10%;
-    background-color: theme('colors.blue.500');
+    background-color: theme('colors.violet.600');
     border-radius: 4px;
   }
   
@@ -195,8 +195,12 @@
     margin: auto;
     width: 60%;
     height: 60%;
-    border: 10% solid theme('colors.red.500');
+    border: 10% solid theme('colors.fuchsia.500');
     border-radius: 50%;
     box-sizing: border-box;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-700 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent dark:from-violet-400 dark:via-purple-400 dark:to-fuchsia-400;
   }
 }
