@@ -91,7 +91,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-indigo-950 text-foreground min-h-screen;
+    @apply bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 dark:from-gray-900 dark:via-purple-950 dark:to-indigo-950 text-foreground min-h-screen;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -133,31 +133,31 @@
   content: '';
   position: absolute;
   inset: 10%;
-  background-color: rgba(var(--primary-rgb), 0.1);
+  background: linear-gradient(135deg, rgba(219, 39, 119, 0.1), rgba(124, 58, 237, 0.1), rgba(79, 70, 229, 0.1));
   border-radius: 12px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 @layer components {
   .glass-panel {
-    @apply bg-white/70 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
+    @apply bg-white/50 dark:bg-black/20 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground rounded-xl px-6 py-3 transition-all 
-           shadow-[0_0_0_0_rgba(59,130,246,0)] hover:shadow-[0_0_0_4px_rgba(59,130,246,0.3)]
+    @apply bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl px-6 py-3 transition-all 
+           shadow-[0_0_0_0_rgba(219,39,119,0)] hover:shadow-[0_0_15px_rgba(219,39,119,0.4)]
            active:scale-[0.98] font-medium;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground rounded-xl px-6 py-3 transition-all
-           shadow-[0_0_0_0_rgba(203,213,225,0)] hover:shadow-[0_0_0_4px_rgba(203,213,225,0.4)]
+    @apply bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-xl px-6 py-3 transition-all
+           shadow-[0_0_0_0_rgba(79,70,229,0)] hover:shadow-[0_0_15px_rgba(79,70,229,0.4)]
            active:scale-[0.98] font-medium;
   }
   
   .input-primary {
-    @apply bg-white/40 dark:bg-black/20 border border-gray-200 dark:border-gray-800 rounded-xl 
-           px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 transition-all;
+    @apply bg-white/50 dark:bg-black/20 border border-gray-200/50 dark:border-gray-800/50 rounded-xl 
+           px-4 py-3 outline-none focus:ring-2 focus:ring-purple-500/30 transition-all;
   }
   
   .x-mark {
@@ -172,7 +172,7 @@
     margin: auto;
     width: 75%;
     height: 10%;
-    background-color: theme('colors.violet.600');
+    background-color: theme('colors.indigo.600');
     border-radius: 4px;
   }
   
@@ -195,12 +195,13 @@
     margin: auto;
     width: 60%;
     height: 60%;
-    border: 10% solid theme('colors.fuchsia.500');
+    border: 10% solid theme('colors.pink.500');
     border-radius: 50%;
     box-sizing: border-box;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-violet-700 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent dark:from-violet-400 dark:via-purple-400 dark:to-fuchsia-400;
+    @apply bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent dark:from-pink-400 dark:via-purple-400 dark:to-indigo-400;
   }
 }
+

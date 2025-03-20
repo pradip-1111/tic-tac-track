@@ -39,20 +39,22 @@ const GameStatus: React.FC<GameStatusProps> = ({
       transition={{ duration: 0.5, delay: 0.2 }}
       className="w-full max-w-md mx-auto mt-6"
     >
-      <div className="glass-panel p-4 rounded-xl text-center bg-gradient-to-br from-indigo-50/80 to-purple-50/80 dark:from-indigo-950/30 dark:to-purple-900/30 shadow-lg">
-        <h2 className="text-xl font-medium mb-4 text-gradient">{getStatusMessage()}</h2>
+      <div className="glass-panel p-5 rounded-xl text-center bg-gradient-to-br from-pink-50/80 via-purple-50/80 to-indigo-50/80 dark:from-pink-950/30 dark:via-purple-950/30 dark:to-indigo-950/30 shadow-lg border border-white/20 dark:border-white/5">
+        <h2 className="text-2xl font-medium mb-5 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 dark:from-pink-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">
+          {getStatusMessage()}
+        </h2>
         
         {winner && (
-          <div className="flex space-x-3 justify-center">
+          <div className="flex space-x-4 justify-center">
             <Button 
               onClick={onResetBoard} 
-              className="bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-medium rounded-xl px-6 py-2 transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)]"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium rounded-xl px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(219,39,119,0.5)] transform hover:scale-105"
             >
               Play again
             </Button>
             <Button 
               onClick={onResetGame} 
-              className="bg-gradient-to-r from-indigo-400 to-blue-400 hover:from-indigo-500 hover:to-blue-500 text-white font-medium rounded-xl px-6 py-2 transition-all duration-300 hover:shadow-[0_0_15px_rgba(99,102,241,0.5)]"
+              className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-medium rounded-xl px-6 py-3 transition-all duration-300 hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transform hover:scale-105"
             >
               New players
             </Button>
